@@ -21,3 +21,5 @@ require 'directors_database'
 #   # Be sure to return the result at the end!
 #   result
 # end
+
+pp directors_database
