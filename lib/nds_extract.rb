@@ -15,7 +15,11 @@ def directors_totals(nds)
   # and total up all the
   
   directors_database.length.times do |i|
-    result[directors_database[i][:name]] = [directors_database[i][:worldwide_gross]]
+    sum = 0
+    directors_database[i][:movies].length.times do |index|
+      sum = sum + directors_database[i][:movies][index][:worldwide_gross]
+    end
+    result[directors_database[i][:name]] = sum
   end
   
   # Be sure to return the result at the end!
